@@ -1,0 +1,9 @@
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}} StandUp!!
+  </h1>
+<h2>Today's presentations </h2>
+</div>
+<div class="cards-container">
+  <card *ngFor="let presentation of presentations" [title]="presentation.title" [subtitle]="presentation.speaker" ></card>
+</div>

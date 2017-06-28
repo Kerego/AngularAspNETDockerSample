@@ -5,8 +5,11 @@
 /tmp
 /out-tsc
 
+webapi/bin
+webapi/obj
+
 # dependencies
-/node_modules
+front/node_modules
 
 # IDEs and editors
 /.idea

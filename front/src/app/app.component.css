@@ -1,0 +1,10 @@
+h1 {
+    /*color: #2277cc;*/
+    color: red;
+}
+
+.cards-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

@@ -1,0 +1,27 @@
+version: '2'
+services:
+  front:
+    build: front
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./front:/usr/src/app
+  webapi:
+    build: webapi
+    environment:
+      - ASPNETCORE_URLS=http://+:5000
+    ports:
+      - "5000:5000"
+  db:
+    image: microsoft/mssql-server-linux
+    hostname: sqlserver
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=100De100!
+    ports:
+      - '1433:1433'
+    volumes:
+      - sqlserver-data:/var/opt/mssql
+volumes:
+  sqlserver-data:
+    driver: local
