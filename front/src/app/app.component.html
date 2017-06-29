@@ -1,9 +1,14 @@
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}} StandUp!!
-  </h1>
-<h2>Today's presentations </h2>
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+
+  <div class="w3-display-topmiddle w3-margin">
+    <h1 class="w3-jumbo w3-animate-top">{{title}} StandUp!!</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <p class="w3-large w3-center">Today's presentations </p>
+  </div>
+
+
 </div>
-<div class="cards-container">
-  <card *ngFor="let presentation of presentations" [title]="presentation.title" [subtitle]="presentation.speaker" ></card>
+<div class="cards-container" style="top: 30%;left:10%;right:10%">
+  <card *ngFor="let presentation of presentations" [presentation]="presentation">
+  </card>
 </div>

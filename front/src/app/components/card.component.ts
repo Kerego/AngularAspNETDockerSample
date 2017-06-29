@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Presentation } from "app/models/presentation";
 
 @Component({
   selector: 'card',
@@ -6,7 +7,5 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent {
-	@Input() public title: string;
-	@Input() public subtitle: string;
-	@Input() public poster: string;
+	@Input() public presentation: Presentation;
 }
