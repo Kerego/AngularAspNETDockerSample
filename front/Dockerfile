@@ -1,10 +1,10 @@
 FROM node:alpine
-WORKDIR /app
+WORKDIR /usr/src/app
 
-# COPY package.json .
-# RUN npm install
+COPY package.json .
+RUN npm install
 
-# COPY . .
+COPY . .
 
 EXPOSE 4200
 ENTRYPOINT ["npm", "start"]
